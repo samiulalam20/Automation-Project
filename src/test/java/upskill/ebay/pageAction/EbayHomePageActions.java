@@ -97,5 +97,43 @@ public class EbayHomePageActions {
 		SetupDrivers.driver.switchTo().alert().sendKeys("Good service");
 		SetupDrivers.driver.switchTo().alert().getText();
 	}
+	
+public void handleIframe(){
+		
+		//i find iframe using iframe tag in DOM or HTML
+		//i use switchTo().frame() to switch iframes
+		
+		//Switch iframe by Index
+		SetupDrivers.driver.switchTo().frame(0);
+		SetupDrivers.driver.switchTo().frame(1);
+		
+		//Switch iframe by Name or ID
+		SetupDrivers.driver.switchTo().frame("iframe-name");
+		SetupDrivers.driver.switchTo().frame("id");
+		
+		//Switch back to previous iframe
+		SetupDrivers.driver.switchTo().defaultContent();
+		SetupDrivers.driver.switchTo().parentFrame();
+		SetupDrivers.driver.switchTo().frame("parent");
+		
+		//nested iframe
+		SetupDrivers.driver.switchTo().frame("inner");
+		SetupDrivers.driver.switchTo().frame("child");
+	}
+
+public void dynamicFrameObject(){
+	
+	List<WebElement> framelist = SetupDrivers.driver.findElements(By.id("courses-iframe"));
+	
+	for(int i = 0; i<framelist.size(); i++){
+		SetupDrivers.driver.switchTo().frame(i);
+		
+		try {
+			EbayHomePageLocatorsObj.btnSearch.click();
+		} catch (Exception e){
+			System.out.println("Element not found in iframe");
+		}
+	}
+}
 
 }
