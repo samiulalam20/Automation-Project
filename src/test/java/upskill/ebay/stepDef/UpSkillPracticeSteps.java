@@ -53,5 +53,35 @@ public class UpSkillPracticeSteps {
 	public void user_should_able_to_write_on_Textbox() throws Throwable {
 	    UpSkillPracticeActionsObj.writeTextbox();
 	}
+	
+	@Then("^Click on Radio (\\d+)$")
+	public void click_on_Radio(int arg1) throws Throwable {
+	    UpSkillPracticeActionsObj.clickRadio();
+	}
+
+	@Then("^Click on Checkbox (\\d+)$")
+	public void click_on_Checkbox(int arg1) throws Throwable {
+	    UpSkillPracticeActionsObj.clickCheckbox();
+	}
+	
+	@When("^Click on Open Window$")
+	public void click_on_Open_Window() throws Throwable {
+	    UpSkillPracticeActionsObj.openWindow();
+	}
+
+	@Then("^Switch to new Window$")
+	public void switch_to_new_Window() throws Throwable {
+	    UpSkillPracticeActionsObj.switchWindow();
+	}
+	
+	@When("^Click on Confirm$")
+	public void click_on_Confirm() throws Throwable {
+	    UpSkillPracticeActionsObj.clickConfirm();
+	}
+
+	@Then("^Verify Great$")
+	public void verify_Great() throws Throwable {
+	    UpSkillPracticeActionsObj.verifyGreat();
+	}
 
 }

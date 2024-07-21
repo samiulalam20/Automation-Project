@@ -28,5 +28,21 @@ public class UpSkillPracticeLocators {
 	//Textbox
 	@FindBy ( xpath = "//*[contains(@placeholder,'search')]")
 	public WebElement txtbx;
+	
+	//Radio Button
+	@FindBy ( xpath = "//input[@id='flexRadioDefault2']")
+	public WebElement rdbtn;
+	
+	//Checkbox
+	@FindBy ( xpath = "//input[@id='flexCheckCheckedOne']")
+	public WebElement checkbx;
+	
+	//Open Window
+	@FindBy ( xpath = "//button[contains(text(),'Open Window')]")
+	public WebElement openwindow;
+	
+	//Click Confirm
+	@FindBy ( xpath = "//button[contains(text(),'Confirm')]")
+	public WebElement clickConfirm;
 
 }

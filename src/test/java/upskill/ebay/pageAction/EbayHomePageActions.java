@@ -121,7 +121,7 @@ public void handleIframe(){
 		SetupDrivers.driver.switchTo().frame("child");
 	}
 
-public void dynamicFrameObject(){
+/*public void dynamicFrameObject(){
 	
 	List<WebElement> framelist = SetupDrivers.driver.findElements(By.id("courses-iframe"));
 	
@@ -134,6 +134,6 @@ public void dynamicFrameObject(){
 			System.out.println("Element not found in iframe");
 		}
 	}
-}
+}*/
 
 }

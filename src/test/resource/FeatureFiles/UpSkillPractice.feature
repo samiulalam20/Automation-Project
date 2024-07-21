@@ -19,3 +19,18 @@ Feature: UpSkill Automation Practice
 		
 	Scenario: Iframe Practice
 		Then User should able to write on Textbox
+		
+	Scenario: Radio Button Practice
+		Then Click on Radio 2
+		
+	Scenario: Checkbox Practice
+		Then Click on Checkbox 2
+		
+	Scenario: Switch Window Practice
+		When Click on Open Window
+		Then Switch to new Window
+		
+	Scenario: Confirm Practice
+		When Click on Confirm
+		Then Click on OK
+		And Verify Great
