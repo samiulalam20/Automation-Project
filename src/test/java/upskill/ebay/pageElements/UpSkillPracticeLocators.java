@@ -44,5 +44,9 @@ public class UpSkillPracticeLocators {
 	//Click Confirm
 	@FindBy ( xpath = "//button[contains(text(),'Confirm')]")
 	public WebElement clickConfirm;
+	
+	//Switch to Iframe and click on home
+	@FindBy ( xpath = "//p[contains(text(),'Home')]")
+	public WebElement clickHome;
 
 }

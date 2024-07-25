@@ -2,6 +2,8 @@ package upskill.ebay.pageAction;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -90,14 +92,28 @@ public class UpSkillPracticeActions {
 		Thread.sleep(3000);
 	}
 	
-	public void clickConfirm(){
+	public void clickConfirm() throws Exception{
 		UpSkillPracticeLocatorsObj.clickConfirm.click();
+		Thread.sleep(3000);
 	}
 	
-	public void verifyGreat(){
+	public void verifyGreat() throws Exception{
+		String greatTxt = SetupDrivers.driver.switchTo().alert().getText();
+		Assert.assertEquals("Great!", greatTxt);
+		Thread.sleep(8000);
 		SetupDrivers.driver.switchTo().alert().accept();
-		Assert.assertEquals("Great!", UpSkillPracticeLocatorsObj.clickConfirm.getText());
-		SetupDrivers.driver.switchTo().alert().accept();
+		Thread.sleep(8000);
+	}
+	
+	public void switchToIframeHome() throws Exception{
+		WebElement frameName = SetupDrivers.driver.findElement(By.xpath("//iframe[@title='Upskill Consultancy']"));
+		SetupDrivers.driver.switchTo().frame(frameName);
+		Thread.sleep(5000);
+	}
+	
+	public void clickOnHome() throws Exception{
+		UpSkillPracticeLocatorsObj.clickHome.click();
+		Thread.sleep(3000);
 	}
 
 }

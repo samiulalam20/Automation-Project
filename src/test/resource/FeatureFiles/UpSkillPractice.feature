@@ -34,3 +34,7 @@ Feature: UpSkill Automation Practice
 		When Click on Confirm
 		Then Click on OK
 		And Verify Great
+		
+	Scenario: Iframe Home Practice
+		When Switch to iframe Home
+		Then Click on Home

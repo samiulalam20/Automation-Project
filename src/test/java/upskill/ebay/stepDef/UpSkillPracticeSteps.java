@@ -83,5 +83,15 @@ public class UpSkillPracticeSteps {
 	public void verify_Great() throws Throwable {
 	    UpSkillPracticeActionsObj.verifyGreat();
 	}
+	
+	@When("^Switch to iframe Home$")
+	public void switch_to_iframe_Home() throws Throwable {
+	    UpSkillPracticeActionsObj.switchToIframeHome();
+	}
+
+	@Then("^Click on Home$")
+	public void click_on_Home() throws Throwable {
+	    UpSkillPracticeActionsObj.clickOnHome();
+	}
 
 }
